@@ -69,7 +69,7 @@ export const WorkOutAddModal = ({ open, onClose, onConfirm }: Props) => {
             <Text style={styles.inputLabel}>Title ({`최대 ${MAX_TITLE_LENGTH}자`})</Text>
             <TextInput
               placeholder="제목을 입력해 주세요."
-              inputMode="text"
+              keyboardType="default"
               maxLength={MAX_TITLE_LENGTH}
               value={workOutItem.title}
               onChangeText={(text) => handleInputChange("title", text)}
@@ -79,7 +79,7 @@ export const WorkOutAddModal = ({ open, onClose, onConfirm }: Props) => {
             <Text style={styles.inputLabel}>Duration ({`${MIN_DURATION} ~ ${MAX_DURATION}초`})</Text>
             <TextInput
               placeholder="시간을 입력해 주세요."
-              inputMode="numeric"
+              keyboardType="number-pad"
               value={workOutItem.duration.toString()}
               onChangeText={(text) => handleInputChange("duration", text)}
             />
